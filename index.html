@@ -12,11 +12,12 @@
 
     <div id='app'>
         <h1>Email List</h1>
-        <ul>
-            <li v-for="email in randomEmails">
+        <ul v-if="randomEmails.length === 10">
+            <li v-for="email in randomEmails">                
                 {{email}}
             </li>
         </ul>
+        <p v-else>Loading</p>
     </div>
     <!-- /#app -->
 
